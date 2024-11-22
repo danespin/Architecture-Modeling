@@ -1,0 +1,105 @@
+@startmindmap DesignArtifacts
+
+* Architecture
+ * Structure
+  * System context
+  * Infrastructure/Network view
+  * Technology stack
+  * Deployment diagram
+  * Data Architecture
+   * Data Models
+   * Data Lineage
+   * Data quality controls
+  * Interface Architecture
+   * External
+   * Internal
+   * Interface contracts
+    * API specifications
+    * Message schemas
+    * File formats
+ * Behavior
+  * Use cases (Business Architecture)
+  * Critical flows
+  * Lifecycle models
+ * Security Architecture
+  * Assurance
+  * Authn controls
+   * End-user level
+   * System-user level
+    * App to app
+    * App to resources
+     'Such as
+     * middleware
+     * (critical) files
+     * Secrets
+      * cryptographic keys
+      * tokens
+   * Infrastructure level
+  * Session controls
+  * Authz controls
+   * End-user level
+    * Permission models
+    * Access matrices
+   * System-user level
+   * Infrastructure level
+  * Network controls
+   * IPSec,...
+  * Cyber resilience / Fault tolerance
+   * Single point of failures
+   * Security control - failure modes
+  * Logging & Monitoring
+  * Asset Protection
+   * Data in motion
+   * Data at rest
+   * Data in use
+    * Input processing controls
+     * Input validation patterns (positive/negative)
+     * Parser hardening configurations
+     * Input sanitization rules
+    * Runtime processing controls
+     * Memory protection
+     * Process isolation
+    * Output processing controls
+     * Server-side masking
+     * Output encoding
+     * Data filtering
+   * API Security
+    * Input validation
+    * API Gateway
+     * Integration patterns
+      * Authn
+      * Authz
+     * Traffic Management
+      * Rate limiting
+    * API Lifecycle controls
+     * Versioning strategy
+     * Deprecation policies
+     * Retirement controls
+    * API Discovery controls
+     * Documentation
+     * Service Registry
+   * Container security
+  * Administration of security controls
+   * For all types of Secrets
+    * Secrets deployment view
+    * Management tools
+    * Managed vs unmanaged
+    * Additionally for keys
+     * Inventory of cryptographic keys
+      * Design
+       * Key hierarchies
+       * Logging & monitoring
+        * Relevant IoCs
+      * metadata
+       * Purpose
+        * Relationships (e.g., KEK for DEK1)
+       * Owner
+       * Custodians
+       * Validity periods
+       * Storage
+       * Supported key mgmt actions per key type/use case
+       * Cryptoagility metadata
+   * For users (access management)
+
+
+@endmindmap
